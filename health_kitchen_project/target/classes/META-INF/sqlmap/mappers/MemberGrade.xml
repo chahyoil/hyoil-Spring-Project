@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="MemberGrade">
+	<resultMap id="MemberGradeResult" type="MemberGrade">
+		<result property="mlevelno" column="mlevelno"/>
+		<result property="mlevelname" column="mlevelname"/>
+		<result property="mleveldc" column="mleveldc"/>
+	</resultMap>
+
+	<select id="member_GradeDiscount" parameterType="String" resultType="float">
+	select m2.mleveldc from member m1, membergrade m2 where m1.mid=#{mid} and m1.MLEVELNO=m2.MLEVELNO
+	</select>
+	
+</mapper>

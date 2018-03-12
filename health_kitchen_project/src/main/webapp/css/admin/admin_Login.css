@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+div {
+    display: block;
+}
+
+body, input, select, textarea, button {
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #4c4c4c;
+    font-size: 12px;
+    max-width: 100%;
+}
+
+.layout-page-header {
+    text-align: center;
+    padding-bottom: 40px;
+    margin-top: 150px;
+}
+
+.layout-page-title {
+    font-family: 'Noto Sans KR Medium';
+    line-height: 1.5;
+    font-size: 40px!important;
+    font-weight: 400;
+    color: #4e266d;
+    display: block;
+    padding: 10px 0 14px 0;
+}
+
+#content {
+    min-width: 1050px;
+    padding-bottom: 170px;
+    position: relative;
+}
+
+.layout-bg {
+    background-color: #F7F5F8;
+    width: 100%;
+    display: table;
+    padding: 50px 0 50px 0;
+}
+
+.layout-wrapper {
+    width: 1050px;
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.login_wrap {
+    width: 650px;
+    margin: 0 auto;
+    display: table;
+}
+
+.login {
+    text-align: center;
+}
+
+.login .text {
+    width: 110px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.login ul {
+    display: inline-block;
+    vertical-align: middle;
+    height: 90px;
+    padding-right: 20px;
+}
+
+ol, ul {
+    list-style-type: none;
+}
+
+.login ul li {
+    clear: both;
+    height: 45px;
+    line-height: 45px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.login input[type="text"], .login input[type="password"] {
+    text-indent: 5px;
+    margin: 0;
+    border: 1px solid #bfbfbf;
+    line-height: 38px;
+    height: 38px;
+}
+
+
+.bhs_button {
+	width: auto;
+    padding: 20px 20px;
+    height: 86px;
+    width: 130px;
+    display: inline-block;
+    text-align: center;
+    background-color: #795b8f;
+    border: 1px solid #56297a;
+    color: #fff;
+    font-size: 17px;
+    float: right;
+    margin-left: 2px;
+    font-size: 13px;
+}
+
+.login_button {
+	margin:0 auto;
+    margin-top: 50px;
+    border-top: 1px solid #6A3664;
+    padding-top: 20px;
+}
+
+.login_button .bhs_button {
+    width: 152px;
+    height: 42px;
+    display: inline-block;
+    text-align: center;
+    background-color: #795b8f;
+    border: 1px solid #56297a;
+    color: #fff;
+    font-size: 15px;
+    float: right;
+    margin-left: 2px;
+    font-size: 13px;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+.login_button ul {
+    text-align: center;
+}
+
+
+
+.login_button li {
+    display: inline-block;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.space {
+    height: 100px;
+}

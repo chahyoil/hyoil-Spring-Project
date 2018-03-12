@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="CurrentProduct">
+	<resultMap id="CurrentProductResult" type="CurrentProduct">
+		<result property="cno" column="cno"/>
+		<result property="mid" column="mid"/>
+		<result property="pid" column="pid"/>
+		<result property="pname" column="pname"/>
+		<result property="pimage" column="pimage"/>
+		<result property="ctime" column="ctime"/>
+		<result property="startRow" column="startRow"/>
+		<result property="endRow" column="endRow"/>
+	</resultMap>
+	
+	
+	<select id="CurrentProductTotal" resultType="int" parameterType="String">
+	
+	<if test="mid==null">
+		SELECT COUNT(*) FROM CURRENTPRODUCT
+	</if>
+	
+	<if test="mid!=null">
+		SELECT COUNT(*) FROM CURRENTPRODUCT WHERE MID=#{mid}
+	</if>
+	
+	</select>
+	
+	<select id="CurrentProductList" resultMap="CurrentProductResult" parameterType="CurrentProduct">
+		SELECT DISTINCT PID, PNAME, PIMAGE FROM(SELECT ROWNUM RN, A.* FROM(SELECT P.PID, P.PNAME, P.PIMAGE FROM PRODUCT P, MEMBER M, CURRENTPRODUCT C WHERE P.PID=C.PID AND M.MID=C.MID AND C.MID=#{mid} ORDER BY C.CTIME DESC) A) WHERE RN BETWEEN #{startRow} AND #{endRow}
+	</select>
+	
+	<insert id="CurrentProductInsert" parameterType="CurrentProduct">
+		INSERT INTO CURRENTPRODUCT VALUES(CURRENTPRODUCT_SEQ.NEXTVAL, #{mid}, #{pid}, SYSDATE)
+	</insert>
+	
+</mapper>    

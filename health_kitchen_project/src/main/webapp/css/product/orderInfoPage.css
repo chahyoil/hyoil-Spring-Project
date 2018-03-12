@@ -1,0 +1,173 @@
+@charset "UTF-8";
+.layout-page-header{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.layout-page-title {
+    font-family: 'Noto Sans KR Medium';
+    line-height: 1.5;
+    font-size: 40px!important;
+    font-weight: 400;
+    color: #4e266d;
+    display: block;
+    padding: 10px 0 14px 0;
+    padding-top: 50px;
+}
+.contentMyPage{
+	width: 80%;
+}
+.pg_sub_desc {
+    font-family: 'Noto Sans KR Light';
+    text-align: center;
+    margin: 0 0 40px 0;
+    line-height: 18px;
+}
+
+#content {
+    min-width: 1050px;
+    padding-bottom: 170px;
+}
+
+.user_form * {
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+    color: #000;
+    letter-spacing: -0.3px;
+}
+
+.layout-wrapper {
+    width: 1050px;
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.styled-table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: center;
+    border-top: 2px solid #56297a;
+}
+
+tr{
+	border-bottom: 0.2px dotted #56297a;
+}
+
+.styled_table thead{ 
+	border-bottom: 4px dotted blue;
+}
+
+.goods_orderitem .styled-table thead th, .goods_orderitem .styled-table thead td {
+    padding-bottom: 23px;
+}
+
+.goods_orderitem .styled-table th {
+    padding: 19px 0 0;
+    font-size: 14px;
+    color: #4c4c4c;
+    line-height: 20px;
+}
+
+.goods_orderitem .styled-table td.thumb_area {
+    width: 190px;
+}
+
+img {
+    border: 0;
+}
+
+.goods_orderitem .styled-table td.goods-cart-product-cell {
+    width: auto;
+    padding: 20px 20px 20px 48px;
+}
+
+.goods_orderitem .goods-cart-product-name {
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: 21px;
+    font: 16px/24px 'Noto Sans KR Medium';
+    color: #000;
+}
+
+.goods-cart-no-package-name {
+    font-size: 12px;
+}
+
+.goods_orderitem .styled-table td {
+    width: 176px;
+}
+
+.goods_orderitem .styled-table .goods-cart-price-value {
+    padding-right: 32px;
+    margin-top: -21px;
+}
+
+.goods_orderitem .goods-cart-price-value {
+    font: 20px/29px 'Noto Sans KR Medium';
+    color: #512772;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.goods_orderitem .goods-cart-result {
+    padding: 19px 32px 8px 0;
+    border-bottom: 0 none;
+}
+
+.goods_orderitem .goods-cart-settleprice {
+    border-bottom: 0 none;
+    font: 14px/29px 'Noto Sans KR';
+    text-align: right;
+}
+
+.goods_orderitem .goods-cart-settleprice .goods-cart-price-value {
+    padding: 0 0 0 18px;
+}
+
+.txt_orderitem {
+    padding: 0 32px 0 0;
+    font: 12px/18px 'Noto Sans KR';
+    line-height: 18px;
+    letter-spacing: -0.2px;
+    text-align: right;
+}
+<!-- -->
+.btn_confirm {
+    float: left;
+    height: 42px;
+    margin-right: 12px;
+    padding: 0 17px;
+    border: 1px solid #512772;
+    background-color: #fff;
+    color: #56297a;
+    letter-spacing: 0;
+}
+
+.confirmOk {
+    float: left;
+    height: 42px;
+    margin-right: 12px;
+    padding: 0 17px;
+    border: 1px solid #c0c0c0;
+    background-color: #fff;
+    color: #c0c0c0;
+    letter-spacing: 0;
+}
+
+.btn_chr {
+    float: left;
+    height: 42px;
+    margin-right: 12px;
+    padding: 0 17px;
+    border: 1px solid #512772;
+    background-color: #fff;
+    color: #56297a;
+    letter-spacing: 0;
+}
+
+.goods-cart-product-image{
+	width:150px;
+	height:192px;
+}

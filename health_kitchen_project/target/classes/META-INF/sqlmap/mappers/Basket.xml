@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Basket">
+	<resultMap type="Basket" id="BasketResult">
+		<result property="bno" column="bno" />
+		<result property="mid" column="mid" />
+		<result property="pid" column="pid" />
+		<result property="bcount" column="bcount" />
+		<result property="btotal" column="btotal" />
+	</resultMap>
+
+	<select id="member_BasketList" parameterType="String" resultType="ProductBasket">
+		select * from basket b, product p where b.mid=#{mid} and b.pid=p.pid
+	</select>
+
+	<delete id="member_BasketDelete" parameterType="hashmap">
+		DELETE FROM
+		BASKET WHERE BNO=#{bno} AND MID=#{mid}
+	</delete>
+	
+	<select id="member_BasketDupleChk" parameterType="Basket" resultType="int">
+		SELECT COUNT(*) FROM BASKET WHERE PID=#{pid} AND MID=#{mid}
+	</select>
+	
+	<update id="member_BasketUpdate" parameterType="Basket">
+	   UPDATE BASKET SET BCOUNT=#{bcount}, BTOTAL=#{btotal} WHERE pid=#{pid} AND MID=#{mid}
+	</update>
+	
+	<insert id="member_BasketInsert" parameterType="Basket">
+		insert into basket values(BASKET_SEQ.nextval,#{mid},#{pid},#{bcount},#{btotal})
+	</insert>
+	
+	<update id="member_BasketPlusMinusUpdate" parameterType="Basket">
+		UPDATE BASKET SET BCOUNT=#{bcount}, BTOTAL=#{btotal} WHERE BNO=#{bno} AND MID=#{mid}
+	</update>
+
+	<delete id="member_BasketPlusMinusDelete" parameterType="Basket">
+		Delete Basket where BNO=#{bno}
+	</delete>
+</mapper>

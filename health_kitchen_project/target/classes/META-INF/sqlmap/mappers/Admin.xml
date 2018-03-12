@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="Admin">
+	<resultMap id="AdminResult" type="Admin">
+		<result property="aid" column="aid"/>
+		<result property="apw" column="apw"/>
+	</resultMap>
+	
+	<select id="admin_Login" parameterType="String" resultType="String">
+		SELECT APW FROM ADMIN WHERE AID=#{aid}
+	</select>
+	
+	<select id="adminList" resultMap="AdminResult">
+		SELECT * FROM ADMIN
+	</select>
+	
+	<select id="admin_View" parameterType="Admin" resultType="int">
+		SELECT Count(*) FROM ADMIN Where AID=#{aid}
+	</select>
+	<select id="admin_ReviewData" resultType="Admin">
+	
+	SELECT * FROM (
+		SELECT ROWNUM RN, A.*
+    		FROM (SELECT RBHIT, M.MID, M.MPW FROM RBOARD r, MEMBER M WHERE R.MID=M.MID ORDER BY RBHIT DESC) a)
+        
+        WHERE RN <![CDATA[ < ]]>=5
+    
+	</select>
+	<update id="admin_UserLevelupService" parameterType="String">
+		UPDATE MEMBER SET mlevelno = mlevelno + 1 WHERE MID=#{mid}
+	</update>
+	<select id="admin_UserList" parameterType="Page" resultType="Member"> 
+		SELECT * FROM (SELECT ROWNUM RN, A.* FROM (SELECT * FROM MEMBER ORDER BY MJOINDATE) A ) WHERE RN BETWEEN 0 AND 5
+	</select>
+	<update id="admin_Block" parameterType="String">
+		UPDATE MEMBER SET mblock = 1 WHERE MID=#{mid}
+	</update>
+	<update id="admin_OrderShipping" parameterType="Orders_Detail">
+		UPDATE Orders_Detail SET ocomplete_d=1 WHERE ONO=#{ono} AND PID=#{pid}
+	</update>
+	<update id="admin_ProductStockChange" parameterType="Product">
+		UPDATE PRODUCT SET Pstock=#{pstock} WHERE PID=#{pid}
+	</update>
+	<update id="admin_OrderShippingAll" parameterType="Orders">
+		UPDATE Orders SET OCOMPLETE=#{ocomplete} WHERE ONO=#{ono}
+	</update>
+	
+</mapper>

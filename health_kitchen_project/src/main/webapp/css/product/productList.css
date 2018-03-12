@@ -1,0 +1,140 @@
+@charset "UTF-8";
+#content {
+	width:100%;
+	padding-bottom:170px; 
+}
+#content{
+	position : relative;
+	left: 50px;
+}
+.main-slider{
+	width:100%;
+	height: 450px;
+	overflow: hidden;
+	position: relative;
+}
+.__slide-wrapper{
+	position: relative;
+	overflow: hidden;
+}
+main-slider-wrapper{
+	position: relative;
+	width: 2000px;
+	left: 50%;
+	height: 100%;
+	overflow: hidden;
+	margin-left: -1000px;
+}
+
+#main img{
+	border:0;
+	width:100%;
+}
+.main-section{
+	padding :45px 0;
+}
+.layout-wrapper{
+	width: 1100px;
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+}
+.main-section-header{
+	position: relative;
+    margin-bottom: 12px;
+}
+.main-goods-title{
+	font-size: 15px;
+    color: #512772;
+    display: inline;
+    vertical-align: bottom;
+    line-height: 29px;
+    border-bottom: 2px solid #512772;
+    padding-bottom: 5px;
+}
+.main-goods-item{
+	margin-left: 10px;
+    margin-top: 30px;
+}
+.main-goods-item{
+	width: 430px;
+}
+.main-goods-figure{	
+		width:260px;
+	height:300px;
+    display: block;
+    border:0;
+	width:100%;
+	position: relative;
+    z-index: 10;
+}
+.main-goods-item-price{
+	color : #795c90;
+	font-weight: bolder;
+	font-size: 17px
+}
+.main-goods-figure img{
+	width: 308px;
+ 	height: 350px;
+    display: block;
+    
+}
+.main-goods-item-content{
+	padding: 16px 20px;
+	width:308px;
+	position: relative;
+    top: 50px;
+	border:1px solid;
+	border-color:#E0E0E0;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+}
+.main-goods-item-name{
+	display: block;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 20px;
+}
+.main-goods-list li{
+	width:308px;
+	float: left;
+	margin-right: 13px;
+	margin-bottom: 70px;
+}
+
+
+.sale{
+    background-color: #512772;
+    width: 75px;
+    height: 51px;
+    text-align: center;
+    float: right;
+    position: relative;
+    left: 20px;
+    top: -35px;
+    color: white;
+    padding-top: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

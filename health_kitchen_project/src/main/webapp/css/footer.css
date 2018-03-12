@@ -1,0 +1,315 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+footer ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+footer{
+	position: relative;
+	color: #888;
+	text-align: center;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	top:250px;
+	border-top:1px solid gray; 
+	background: #f7f7f7;
+}
+
+.footer_wrap{
+	position: relative;
+	display: block;
+	width: 1100px;
+	height:200px;
+	margin: 0 auto;
+/* 	border-top: 1px solid #DEDEE6; */
+}
+
+.footer_logo{
+	float: left;
+	width: 130px;
+	/* position: relative; */
+    bottom: 175px;
+}
+.footer_logo img{
+	width: 130px;
+	position: relative;
+    top: 50px;
+}
+}
+img{
+	border: 0;
+}
+.company_info{
+	width: 810px;
+/* 	position:relative; */
+	left:50px;
+	bottom:180px;
+	padding-top: 30px;
+	text-align: left;
+	font-size: 13px;
+}
+.cart_area {
+    z-index: 11;
+    position: fixed;
+    left: -11px;
+    bottom: -218px;
+    text-align: center;
+    width: 99%;
+}
+
+.cart_wrap {
+    vertical-align: top;
+    display: inline-block;
+    overflow: hidden;
+    width : 1024px;
+    height: 246px;
+    border-bottom: 0;
+    background: #f3f3f3;
+    border-radius: 5px 5px 0 0;
+}
+.cart_head{
+	position:relative;
+	height:28px;
+	background:#1c3f21;
+	border:1px solid #112614;
+	border-bottom:0;
+}
+
+.open_cart {
+    overflow: hidden;
+    white-space: nowrap;  
+    height: 32px;
+    border-top-left-radius:3px;
+    border-top-left-radius:3px;
+    outline: 0; 
+    width:1090px;
+    background:#512772;
+    color: white;
+    letter-spacing:-1px;
+    font-weight:bold;
+    font-size:15px;
+    text-align: center;
+}
+
+.btn_top{
+	color: white;
+    font-size: 11px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    width: 56px;
+    height: 32px;
+    background: #851485;
+}
+
+.btn_top::after {
+    display: inline-block;
+    content: "";
+    border-bottom: 6px solid #1c3f34;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: relative;
+    bottom: 1px;
+    left: 3px;
+}
+
+.cart_container {
+    padding: 30px 20px 14px;
+    width:1090px;
+    height:210px;
+    background-color: #F3F3F3;
+}
+
+.cart_container .cart_product {
+    overflow: hidden;
+    width: 792px;  
+    height:195px;
+    background:url(http://www.hellonature.net/shop/web/images/renew_common/cart_none.png) repeat-x;
+}
+.cart_container .cart_article {
+    float: left;
+}
+
+.cart_container .cart_total {
+    width: 175px;
+    height: 194px;
+    padding-left: 15px;
+    background: url(http://www.hellonature.net/shop/web/images/common/bg_line1.png) repeat-y left;
+}
+
+.cart_container .cart_article {
+    float: left;
+}
+
+.cart_container .cart_total h3 {
+    font-size: 15px;
+    color: #403324;
+    margin-bottom: 4px;
+}
+
+.cart_container .cart_total table {
+    width: 100%;
+    margin-bottom: 9px;
+}
+
+tbody {
+    display: table-row-group;
+   /*  vertical-align: middle; */
+    border-color: inherit;
+}
+
+.cart_container .cart_total table th, .cart_container .cart_total table td {
+    border-top: 1px solid #808080;
+    height: 30px;
+}
+
+.cart_container .cart_total .link_order {
+    display: block;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background: #e8cfc4;
+    color: #1c3f21;
+    font-family: YG76;
+    font-size: 16px;
+    text-decoration: none;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    list-style: none;
+  
+}
+.company_info{
+	position: relative;
+	top:40px
+}
+.cart_container .cart_prod {
+    float: left;
+    width: 112px;
+    margin-right: 20px;
+    list-style: none;
+}
+
+.cart_container .prod_box {
+    border: 1px solid #dadada;
+    background: #fff;
+}
+
+.cart_container .prod_box .img_con {
+    width: 110px;
+    height: 110px;
+    border-bottom: 1px solid #dadada;
+}
+
+.cart_container .prod_box .img_con a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #666;
+    cursor: pointer;
+}
+
+.cart_container .prod_box .img_con a img {
+    width: 100px;
+    height: 100px;
+    vertical-align: top;
+    border: 0;
+}
+
+.cart_container .prod_box .bot_con {
+    width: 110px;
+    height: 31px;
+}
+
+.cart_container .prod_box .bot_con .cnt_box {
+    float: left;
+}
+
+.cart_container .prod_box .bot_con .cnt_box span {
+    line-height: 31px;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+.cart_container .prod_box .bot_con .cnt_box .prod_cnt {
+    outline: 0;
+    width: 40px;
+    height: 31px;
+    line-height: 31px;
+    color: #1c3f21;
+    text-align: right;
+    font-family: Tahoma;
+}
+
+.cart_container .prod_box .bot_con .btn_box {
+    float: right;
+    width: 25px;
+    height: 31px;
+    border-left: 1px solid #dadada;
+}
+
+.cart_container .prod_box .bot_con .btn_box .btn_top_box {
+    border-bottom: 1px solid #dadada;
+}
+
+.cart_container .prod_box .bot_con .btn_box .btn_prod_box {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 16px;
+}
+
+.cart_container .prod_box .bot_con .btn_box .btn_prod_p {
+    background: url(http://www.hellonature.net/shop/web/images/common/btn_arr3_t_off_c.gif) no-repeat center;
+}
+
+.cart_container .prod_box .bot_con .btn_box .btn_prod_m {
+    background: url(http://www.hellonature.net/shop/web/images/common/btn_arr3_b_off_c.gif) no-repeat center;
+}
+
+.cart_container .prod_box .bot_con .btn_box .btn_prod {
+    overflow: hidden;
+    vertical-align: top;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: 26px;
+    height: 17px;
+    border: 1px solid #dadada;
+    text-indent: 1000px;
+    white-space: nowrap;
+}
+
+.cart_container .prod_cost_box {
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #1c3f21;
+}
+
+.cart_container .prod_cost_box .prod_cost {
+    font-family: Tahoma;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.yg76 {
+    font-family: YG76;
+}
+
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="NBoard">
+	<resultMap id="NBoardResult" type="NBoard">
+		<result property="nbno" column="nbno"/>
+		<result property="aid" column="aid"/>
+		<result property="nbtitle" column="nbtitle"/>
+		<result property="nbcontent" column="nbcontent"/>
+		<result property="nbhit" column="nbhit"/>
+		<result property="nbfile" column="nbfile"/>		
+		<result property="nbref" column="nbref"/>
+		<result property="nbstep" column="nbstep"/>
+		<result property="nblevel" column="nblevel"/>
+		<result property="nbtime" column="nbtime"/>
+		<result property="startRow" column="startRow"/>
+		<result property="endRow" column="endRow"/>
+		
+	</resultMap>
+	
+	<select id="NBoardList" resultMap="NBoardResult" parameterType="NBoard">
+		SELECT * FROM (SELECT ROWNUM RN, A.* FROM (SELECT * FROM NBOARD ORDER BY NBNO) A) WHERE RN BETWEEN #{startRow} AND #{endRow}
+	</select>
+	
+	<select id="NBoardTotal" resultType="int">
+		SELECT COUNT(*) FROM NBOARD
+	</select>
+	
+	<select id="NBoardDetail" resultMap="NBoardResult" parameterType="int">
+		SELECT * FROM NBOARD WHERE NBNO=#{nbno}
+	</select>
+	
+	<delete id="NBoardDelete" parameterType="int">
+		DELETE NBOARD WHERE NBNO=#{nbno}
+	</delete>
+	
+	<insert id="NBoardWrite" parameterType="NBoard">
+		INSERT INTO NBOARD(NBNO, AID, NBTITLE, NBCONTENT, NBFILE, NBHIT) VALUES (NBOARD_SEQ.NEXTVAL, #{aid}, #{nbtitle}, #{nbcontent}, #{nbfile}, 0)
+	</insert>
+	
+	<update id="NBoardUpdateHit" parameterType="int">
+		UPDATE NBOARD SET NBHIT=NBHIT+1 WHERE NBNO=#{nbno}
+	</update>
+	
+	<update id="NBoardUpdate" parameterType="NBoard">
+		<if test="nbfile=='noImage.png'">
+			UPDATE NBOARD SET NBTITLE=#{nbtitle}, NBCONTENT=#{nbcontent} WHERE NBNO=#{nbno}
+		</if>
+		<if test="nbfile!='noImage.png'">
+			UPDATE NBOARD SET NBTITLE=#{nbtitle}, NBCONTENT=#{nbcontent}, NBFILE=#{nbfile} WHERE NBNO=#{nbno}
+		</if>
+	</update>
+	<!-- 재규 -->
+	<select id="admin_NoticeList" resultMap="NBoardResult">  <!-- 효일꺼랑 이름 안맞아서 바꿈 -->
+		SELECT * FROM NBOARD
+	</select>
+	
+	<select id="admin_NoticeContent" resultMap="NBoardResult"> <!-- 효일꺼랑 이름 안맞아서 바꿈 -->
+		SELECT * FROM NBOARD WHERE NBNO=#{nbno}
+	</select>
+	
+	<insert id="admin_NoticeWrite" parameterType="NBoard"> <!-- 효일꺼랑 이름 안맞아서 바꿈 -->
+		INSERT INTO NBOARD VALUES(NBOARD_SEQ.NEXTVAL, #{aid},#{nbtitle},#{nbcontent},0,#{nbfile},sysdate)
+	</insert>
+</mapper>

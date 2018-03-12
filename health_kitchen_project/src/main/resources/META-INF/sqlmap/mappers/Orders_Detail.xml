@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Orders_Detail">
+	<resultMap id="Orders_DetailResult" type="Orders_Detail">
+		<result property="ono" column="ono" />
+		<result property="pid" column="pid" />
+		<result property="pname" column="pname"/>
+		<result property="qty" column="qty" />
+		<result property="totalprice" column="totalprice" />
+		<result property="ocompleteone" column="ocompleteone" />
+		<result property="ophone" column="ophone"/>
+	</resultMap>
+
+
+	<insert id="member_OrderInfoInsertDetail" parameterType="Orders_Detail">
+		INSERT INTO ORDER_DETAIL
+		VALUES(#{ono},#{pid},#{qty},#{totalprice},#{ocompleteone})
+	</insert>
+
+	<select id="member_OrderListDetail" parameterType="String"
+		resultType="Orders_Detail">
+		select O.*, P.PNAME from order_detail o, product p Where ono=#{ono} AND O.PID=P.PID
+	</select>
+
+	<select id="member_OrderDetailOne" parameterType="Orders_Detail"
+		resultType="Orders_Detail">
+		SELECT * FROM ORDER_DETAIL WHERE ONO=#{ono} AND PID=#{pid}
+	</select>
+
+	<update id="member_OrderListDetailConfirm" parameterType="Orders_Detail">
+		update order_detail set ocompleteone=1 where ono=#{ono} AND PID=#{pid}
+	</update>
+
+	<select id="OrderRatingCount" parameterType="String" resultType="int">
+		select count(pid) from ORDER_DETAIL where pid=#{pid} group by pid
+	</select>
+
+	<select id="admin_OrderListDetail" parameterType="String"
+		resultType="Orders_Detail">
+		<if test="pid==null">
+			select Od.*, P.PNAME, O.OPHONE from order_detail od, product p, orders o Where Od.PID=P.PID AND
+			  OD.ONO=O.ONO
+		</if>
+
+		<if test="pid!=null">
+			select Od.*, P.PNAME, O.OPHONE from order_detail od, product p, orders o Where Od.PID=P.PID AND
+			OD.ONO=O.ONO AND O.pid=#{pid}
+		</if>
+	</select>
+</mapper>

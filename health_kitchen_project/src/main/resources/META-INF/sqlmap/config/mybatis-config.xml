@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="Member" type="com.tj.health_kitchen2.model.Member"/>
+		<typeAlias alias="MemberGrade" type="com.tj.health_kitchen2.model.MemberGrade"/>
+		<typeAlias alias="NBoard" type="com.tj.health_kitchen2.model.NBoard"/>
+		<typeAlias alias="Admin" type="com.tj.health_kitchen2.model.Admin"/>
+		<typeAlias alias="QnaBoard" type="com.tj.health_kitchen2.model.QnaBoard"/>
+		<typeAlias alias="Product" type="com.tj.health_kitchen2.model.Product"/>
+		<typeAlias alias="Orders" type="com.tj.health_kitchen2.model.Orders"/>
+		<typeAlias alias="Orders_Detail" type="com.tj.health_kitchen2.model.Orders_Detail"/>
+		<typeAlias alias="CurrentProduct" type="com.tj.health_kitchen2.model.CurrentProduct"/>
+		<typeAlias alias="Basket" type="com.tj.health_kitchen2.model.Basket" />
+		<typeAlias alias="Rboarder" type="com.tj.health_kitchen2.model.Rboarder" />
+		<typeAlias alias="Reservation" type="com.tj.health_kitchen2.model.Reservation"/>
+		<typeAlias alias="Page" type="com.tj.health_kitchen2.model.Page"/>
+		<typeAlias type="com.tj.health_kitchen2.model.ProductBuyList" alias="ProductBuyList"/>
+		<typeAlias alias="ProductBasket" type="com.tj.health_kitchen2.model.ProductBasket"/>
+		
+	</typeAliases>
+	<mappers>
+		<mapper resource="META-INF/sqlmap/mappers/Member.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/MemberGrade.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/NBoard.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/Admin.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/QnaBoard.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/Product.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/Orders.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/Orders_Detail.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/Basket.xml" />
+		<mapper resource="META-INF/sqlmap/mappers/CurrentProduct.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/Rboarder.xml" />
+		<mapper resource="META-INF/sqlmap/mappers/Reservation.xml" />
+		<mapper resource="META-INF/sqlmap/mappers/Page.xml" />
+		<mapper resource="META-INF/sqlmap/mappers/ProductBuyList.xml"/>
+		<mapper resource="META-INF/sqlmap/mappers/ProductBasket.xml"/>
+	</mappers>
+</configuration>

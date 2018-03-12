@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+ol,ul{
+	list-style-type:none;
+}
+.top-navigation{
+	width:100%;
+	font-size: 12px;
+	letter-spacing:-0.5em;
+}
+#detailSearchButton{
+	background-image: url("btn.png");
+	background-repeat:no-repeat;
+    width: 40px;
+    height: 35px;
+    position: relative;
+    right: -227px;
+    top: -30px;
+    border: none;
+    background-color: white;
+}
+}
+.layout-wrapper{
+	width: 1050px;
+    position: relative;
+    margin: 0 auto;   
+}
+
+.top-navigation-submenu {
+    display: none;
+    position: absolute;
+    width: 103px;
+    left: 10px;
+    top: 30px;
+    text-align: left;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 305;
+    white-space: nowrap;
+}
+
+.top-navigation-anchor .top-navigation-anchor-cs{
+	display: block;
+    font-size: 12px;
+    color: #404040;
+    padding: 4px 0;
+    border: 1px solid transparent;
+}
+.top-navigation-submenu-item a{
+	display: block;
+    padding: 6px 8px;
+}
+.top-navigation-submenu-item:HOVER { background-color: #ccc; cursor: pointer; }
+
+.top-navigation-anchor {
+    display: block;
+    font-size: 12px;
+    color: #404040;
+    padding: 4px 0;
+    border: 1px solid transparent;    
+}
+
+a{
+	background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+*,*:after{
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
+
+.top-navigation-menu-item{
+	display: inline-block;
+    position: relative;
+    padding-left: 18px;
+    padding-bottom: 4px;
+    padding-top: 6px;
+    letter-spacing: 0;
+}
+.top-navigation-menu{
+	text-align: right;
+	margin-right: 450px;
+}
+.top-navagation-anchor{
+	display: block;
+    font-size: 12px;
+    color: #404040;
+    padding: 4px 0;
+    border: 1px solid transparent;
+}
+h1{
+	font-size:2em
+}
+.heaer-main-logo-pic{
+	margin-top: 50px;
+	margin-bottom:50px;
+	height:120px;
+	border:0;
+}
+
+.heaer-main-logo{
+	width: 200px;
+	margin: 0 auto;
+}
+#gnb{
+	border-top: 1px solid #E0E0E0; 
+	border-bottom: 1px solid #E0E0E0; 
+}
+
+#gnb .gnb_hellodieter{
+	position: relative;
+    width: 1050px;
+    height: 45px;
+    letter-spacing: 0;
+    margin: 0 auto;
+    letter-spacing: 0;
+}
+#gnb .inner_hellodieter{
+	position: relative;
+    z-index: 300;
+    height: 45px;
+    width: 1050px;
+    margin: 0 auto;
+}
+#gnb .gnb_main{
+	overflow: hidden;
+    width: 1090px;
+    margin: 0 auto;
+}
+#gnb .gnb_main .gnb{
+	float:left;
+	width:1050px;
+}
+
+#gnb .gnb_main .gnb li {	
+    float: left;   
+    height: 45px;    
+}
+
+#gnb .gnb_main .gnb .menu1 a {    
+    background-color:#512772 /* CF1015 */;
+    color: #fff;
+    height: 45px;
+    font-weight:bold;
+}
+
+#gnb .gnb_main .gnb .menu1 .txt {
+    width: 100px;    
+}
+#gnb .gnb_main .gnb a{
+	overflow: hidden;
+    float: left;
+    height: 45px;
+    padding: 13px 45px 0 45px;
+    font-size: 14px;
+    color: #000;
+    line-height: 20px;
+}
+#gnb .gnb_main .menu1 img {
+    float: left;
+    width: 16px;
+    margin: 16px 10px 0 0;
+}
+#gnb .gnb_main .gnb_search{
+    position: absolute;
+    right: 100px;
+    top: 10px;
+    width: 176px;
+    height: 28px;
+}	
+#gnb .gnb_main .gnb_search .inp_search{
+	width: 215px;
+    height: 28px;
+    padding: 0 9px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    letter-spacing: 0;
+}
+#gnb .gnb_main .gnb_search .btn_search{
+	position: absolute;
+    right: -25px;
+    top: 7px;
+    
+}
+#gnb .gnb_hellodieter .inner_hellodieter .gnb_main .cart{
+	position: relative;
+	right: 40px;
+	top:7px;
+}
+
+#gnb .gnb_hellodieter .inner_hellodieter .gnb_sub{
+	display: none;
+    position:absolute;
+    left: 0;
+    top: 44px;
+    width: 100%;
+} 
+
+#gnb .gnb_hellodieter .inner_hellodieter .gnb_sub .inner_gnbsub {
+	overflow: hidden;
+    width: 850px;
+    padding: 0 0 30px 24px;
+    border: 1px solid #512272;
+    background-color: #fff;
+}
+
+#gnb .gnb_sub .inner_gnbsub .gnb_menu{
+	float: left;
+	width: 200px;
+	padding: 29px 30px 1px 30px;
+	height: 180px;
+	text-align: left;
+}
+#gnb .gnb_sub .inner_gnbsub .gnb_menu .ico{
+	display: block;
+    width: 59px;
+    padding-bottom: 5px;
+}
+#gnb .gnb_sub .tit{
+	display: block;
+    padding-bottom: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+    line-height: 22px;
+    letter-spacing: -0.3px;
+    white-space: nowrap;
+}
+#gnb .gnb_sub .list {
+    padding-top: 12px;
+    font-size:13px;
+    border-top: 1px solid #ddd;
+}
+#detailSearchView{
+	width: 300px;
+	height: 250px;
+	background-color: white;
+	position: relative;
+    left: -39px;
+    top: -27px;
+    border: 1px solid lightgrey;
+}
+#detailsearchtab{
+	position: relative;
+	top: 26px;
+    left: 50px;
+}
+#pcalView{
+	position: relative;
+	left: 10px;
+    top: -5px;
+}
+#ppriceView{
+	position: relative;
+	left: 10px;
+    top: -5px;
+	
+}
+#detailsearchpmain{
+	position: relative;
+	top:36px;
+	left: 50px;
+}
+#dtailsearchbtn{
+	position: relative;
+	top:62px;
+	left: 50px;
+	background-color: #512772;
+	color: white;
+	width: 200px;
+    height: 30px;
+    border: 0;
+}
+#detailsearchoption{
+	width: 180px;
+    height: 25px;
+    position:relative;
+    top: 5px;
+}
+#pmain{
+	position: relative;
+	top: -3px;
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Orders">
+	<resultMap id="OrdersResult" type="Orders">
+		<result property="ono" column="ono" />
+		<result property="mid" column="mid" />
+		<result property="odate" column="odate" />
+		<result property="oaddress" column="oaddress" />
+		<result property="ophone" column="ophone" />
+		<result property="ocompleteall" column="ocompleteall" />
+	</resultMap>
+
+	<insert id="member_OrderInfoInsert" parameterType="orders"> insert into
+		orders values(#{ono},#{mid},SYSDATE,#{oaddress},#{ophone},0) </insert>
+
+	<select id="member_OrderInfoDuplicate" parameterType="String"
+		resultType="int"> select count(*) from orders where ONO=#{ono} </select>
+
+	<select id="member_Order" parameterType="String" resultType="Orders">
+		select * from orders where ono=#{ono} </select>
+
+	<update id="member_MTotalUpdate" parameterType="Member"> Update Member
+		SET MTOTAL=#{mtotal} where MID=#{mid} </update>
+	
+	
+	<select id="member_OrderList" parameterType="String" resultType="Orders">
+		Select * from orders where Mid=#{mid} order by odate desc </select>
+
+	<update id="member_OrderListConfirm" parameterType="String"> update
+		orders set ocompleteall=1 where ono=#{ono} </update>
+
+</mapper>

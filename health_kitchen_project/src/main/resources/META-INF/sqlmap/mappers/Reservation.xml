@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Reservation">
+<resultMap id="ReservationResult" type="Reservation">
+		<result property="ono" column="ono"/>
+		<result property="oshipdate" column="oshipdate"/>
+	</resultMap>
+	
+	<insert id="reservationInsert" parameterType="Reservation">
+	 insert into Reservation values(#{ono},#{oshipdate})
+	</insert>
+	
+</mapper>

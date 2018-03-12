@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Product">
+ <resultMap type="Product" id="ProductResult">
+	<result property="pid" column="pid"/>
+	<result property="mid" column="mid"/>
+	<result property="pname" column="pname"/>
+	<result property="pcal" column="pcal"/>
+	<result property="pmegapick" column="pmegapick"/>
+	<result property="pmdpick" column="pmdpick"/>
+	<result property="pmain" column="pmain"/>
+	<result property="pstock" column="pstock"/>
+	<result property="pprice" column="pprice"/>
+	<result property="pcontent" column="pcontent"/>
+	<result property="prate" column="prate"/>
+	<result property="pimage" column="pimage"/>
+	<result property="phiredate" column="phiredate"/>
+	<result property="phit" column="phit"/>
+	<result property="startRow" column="startRow"/>
+	<result property="endRow" column="endRow"/>
+ </resultMap>
+ <select id="hotItemList" resultMap="ProductResult">
+  Select * from Product where phit >= 20 AND pstock!=0
+ </select>
+ <select id="getItem" parameterType="String" resultMap="ProductResult">
+  Select * from Product where PID=#{pid}
+ </select>
+ 
+ <select id="newProductTotal" resultType="int">
+		SELECT COUNT(*) FROM PRODUCT
+ </select>
+	
+	
+ <select id="newProductList" resultMap="ProductResult" parameterType="Product">
+		SELECT * FROM (SELECT ROWNUM RN, A.* FROM(SELECT * FROM PRODUCT ORDER BY PHIREDATE DESC) A) WHERE RN BETWEEN #{startRow} AND #{endRow}
+ </select>
+ <!-- 재규 -->
+<select id="searchList" resultMap="ProductResult" parameterType="Product">
+		SELECT * FROM(SELECT ROWNUM RN, A.* FROM(SELECT * FROM PRODUCT WHERE PNAME LIKE '%'||#{pname}||'%') A) WHERE RN BETWEEN #{startRow} AND #{endRow}
+</select>
+
+<select id="detailSearchListView" resultMap="ProductResult">
+		SELECT * FROM PRODUCT
+</select>
+
+<select id="category_kcal" resultMap="ProductResult" parameterType="Product">
+      SELECT * FROM PRODUCT WHERE PCAL<![CDATA[ < ]]>#{pcal} ORDER BY PCAL DESC
+</select>
+   
+<select id="detailSearchList" resultMap="ProductResult" parameterType="Product">
+		SELECT * FROM PRODUCT WHERE PCAL<![CDATA[ < ]]>#{pcal} AND PPRICE<![CDATA[ < ]]>#{pprice} AND PMAIN<![CDATA[ < ]]>#{pmain}
+</select>
+<select id="categoryTotal" resultType="int" parameterType="int">
+      SELECT COUNT(*) FROM PRODUCT WHERE PCAL<![CDATA[ < ]]>#{pcal}
+</select>
+<update id="ProductUpdateHit" parameterType="String">
+	UPDATE PRODUCT SET PHIT=PHIT+1 WHERE PID=#{pid}
+</update>
+
+ <!-- 재규 -->
+ <select id="productAllList" resultMap="ProductResult">
+		SELECT * FROM PRODUCT
+</select>
+<select id="admin_ProductContentView" parameterType="String" resultMap="ProductResult">
+		SELECT * FROM PRODUCT WHERE PID=#{pid}
+</select>
+<select id="admin_ProductCountList" resultMap="ProductResult">
+		SELECT * FROM PRODUCT
+</select>
+<insert id="admin_ProductInsert" parameterType="Product">
+		INSERT
+		INTO
+		PRODUCT(PID,PNAME,PCAL,pmegapick,pmdpick,PMAIN,PSTOCK,PPRICE,PCONTENT,PIMAGE)
+		VALUES(PRODUCT_SEQ.NEXTVAL,#{pname},#{pcal},#{pmegapick},#{pmdpick},#{pmain},#{pstock},#{pprice},#{pcontent},#{pimage})
+</insert>
+<delete id="admin_ProductDelete" parameterType="String">
+		UPDATE PRODUCT SET pstock=0 WHERE PID=#{pid}
+</delete>
+<update id="admin_ProductModify" parameterType="Product">
+		UPDATE PRODUCT
+		SET PNAME=#{pname},PCAL=#{pcal},
+		PPRICE=#{pprice},PCONTENT=#{pcontent},PIMAGE=#{pimage},PSTOCK=#{pstock},PMAIN=#{pmain},PMDPICK=#{pmdpick},PMEGAPICK=#{pmegapick} WHERE PID=#{pid}
+</update>
+
+<update id="member_ProductStockChange" parameterType="Product">
+	   UPDATE PRODUCT
+	   SET PSTOCK=#{pstock},prate=#{prate} where PID=#{pid}
+</update>
+
+	
+	
+	<select id="megaSaleList" resultMap="ProductResult"
+		parameterType="int">
+		SELECT * FROM PRODUCT WHERE PMEGAPICK=#{pmegapick}
+	</select>
+	
+	<select id="mdList" resultMap="ProductResult" parameterType="int">
+		SELECT * FROM PRODUCT WHERE PMDPICK=#{pmdpick}
+	</select>
+	
+</mapper>

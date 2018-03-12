@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="QnaBoard">
+	<resultMap id="QnaBoardResult" type="QnaBoard">
+		<result property="qbno" column="qbno"/>
+		<result property="aid" column="aid"/>
+		<result property="mid" column="mid"/>
+		<result property="qbtitle" column="qbtitle"/>
+		<result property="qbcontent" column="qbcontent"/>
+		<result property="qbhit" column="qbhit"/>
+		<result property="qbfile" column="qbfile"/>
+		<result property="qbref" column="qbref"/>
+		<result property="qbstep" column="qbstep"/>
+		<result property="qblevel" column="qblevel"/>
+		<result property="qbtime" column="qbtime"/>
+		<result property="startRow" column="startRow"/>
+		<result property="endRow" column="endRow"/>
+		
+	</resultMap>
+	
+	<select id="QnaBoardList" resultMap="QnaBoardResult" parameterType="QnaBoard">
+		SELECT * FROM (SELECT ROWNUM RN, A.* FROM (SELECT * FROM QBOARD ORDER BY QBNO) A) WHERE RN BETWEEN #{startRow} AND #{endRow}
+	</select>
+	
+	<select id="QnaBoardTotal" resultType="int">
+		SELECT COUNT(*) FROM QBOARD
+	</select>
+	
+	<select id="QnaBoardDetail" resultMap="QnaBoardResult" parameterType="int">
+		SELECT * FROM QBOARD WHERE QBNO=#{qbno}
+	</select>
+	
+	<delete id="QnaBoardDelete" parameterType="int">
+		DELETE QBOARD WHERE QBNO=#{qbno}
+	</delete>
+	
+	<insert id="QnaBoardWrite" parameterType="QnaBoard">
+		INSERT INTO QBOARD(QBNO, MID, QBTITLE, QBCONTENT, QBFILE, QBHIT) VALUES (QBOARD_SEQ.NEXTVAL, #{mid}, #{qbtitle}, #{qbcontent}, #{qbfile}, 0)
+	</insert>
+	
+	<update id="QnaBoardUpdateHit" parameterType="int">
+		UPDATE QBOARD SET QBHIT=QBHIT+1 WHERE QBNO=#{qbno}
+	</update>
+	
+	<update id="QnaBoardUpdate" parameterType="QnaBoard">
+		UPDATE QBOARD SET QBTITLE=#{qbtitle}, QBCONTENT=#{qbcontent}, QBFILE=#{qbfile} WHERE QBNO=#{qbno}
+	</update>
+	
+	<insert id="QnaBoardReply" parameterType="QnaBoard">
+		INSERT INTO QBOARD(QBNO, AID, QBTITLE, QBCONTENT, QBHIT, QBREF, QBSTEP, QBLEVEL) VALUES (QBOARD_SEQ.NEXTVAL, #{aid}, #{qbtitle}, #{qbcontent}, 0, #{qbref}, #{qbstep}, #{qblevel})
+	</insert>
+	
+	<update id="QnaBoardReplyAstep" parameterType="QnaBoard">
+		UPDATE QBOARD SET QBSTEP = QBSTEP+1 WHERE QBREF=#{qbref} AND QBSTEP>#{qbstep}
+	</update>
+</mapper>

@@ -1,0 +1,169 @@
+
+@charset "UTF-8";
+
+ul{
+	list-style: none;
+}
+td,th{
+	padding: 0;
+}
+.layout-wrapper{
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.cs-board-tab-group{
+	border-bottom: 1px solid #bfbfbf;
+	margin-top: 80px;
+	height: 48px;
+}
+.cs-board-tab{
+	float:left;
+}
+.cs-board-tab .__active{
+	border-left: 1px solid #bfbfbf;
+    width: 170px;
+    height: 47px;
+    background: white;
+}
+.cs-board-view-tab-anchor{
+	position: relative;
+    top: 1px;
+    width: 168px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    display: block;
+    color: #4c4c4c;
+    font-size: 14px;
+    background-color: #f0eef1;
+    border: 1px solid #bfbfbf;
+    border-bottom: 0;
+    border-left: none;
+}
+
+.cs-board-tab :first-child .cs-board-view-tab-anchor {
+	border-left: 1px solid #bfbfbf;
+	width: 170px;
+}
+.cs-board-tab .cs-board-view-tab-anchor{
+	border-left: 1px solid #bfbfbf;
+	width: 170px;
+}
+.cs-board-view-tab-anchor .__active{
+	background-color:#fff;
+	height: 47px; 
+}
+
+
+.notice-board{
+	margin-top: 50px;
+	margin-left: 18px;
+}
+.cs-board-view-tab-anchor{
+	position: relative;
+    top: 1px;
+    width: 168px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    display: block;
+    color: #4c4c4c;
+    font-size: 14px;
+    background-color: #f0eef1;
+    border: 1px solid #bfbfbf;
+    border-bottom: 0;
+    border-left: none;
+}
+
+.notice-wrapper{
+	margin-top: 50px;
+}
+.title_txt{
+	margin-top: 30px;
+}
+.title_txt h2{
+	font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+.sort-wrap{
+	font-size: 12px;
+}
+
+.board-table-header{
+	margin: 15px 0 0;
+    color: #353535;
+    font-size: 12px;
+    line-height: 140%;
+	width:100%;
+    border-top: 2px solid #512772;
+}
+
+.board-table-header tobdy tr{
+	border-bottom:1px solid #bfbfbf;
+}
+.board-table-header tobdy tr th{
+	padding: 20px 0 20px;
+	width:100px;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.board-table-header tbody td input{
+	width: 370px;
+}
+.board-table-content{
+	border-top: 1px solid #bfbfbf;
+	border-bottom: 1px solid #bfbfbf;
+}
+.board-table-header tbody td{
+	padding: 20px 0 20px;
+	width:500px;  
+    font-size: 16px;
+}
+
+.btnArea {
+	padding: 10px 0;
+    text-align: right;
+    display: table;
+    width: 100%;
+    border-top:1px solid #6A3664; 
+}
+.picBtnArea{
+	padding: 10px 0;
+    text-align: right;
+    display: table;
+    width: 100%;    
+}
+
+.btnArea .btn_button {
+    width: 150px;
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
+    background-color: #795b8f;
+    border: 1px solid #56297a;
+    color: #fff;
+    font-size: 15px;
+    float: right;
+    margin-left: 2px;
+    font-size: 13px;
+}
+.btnArea .btn_button:HOVER { 
+	background-color: white;
+	color:black;
+	cursor: pointer; 
+}
+
+.board_pg_area{
+	clear:both;
+	text-align: center;
+	padding-bottom: 15px;
+	font-size: 13px;
+} 
+.board-contentView{
+	margin-top: 48px;
+	margin-bottom: 100px;
+}

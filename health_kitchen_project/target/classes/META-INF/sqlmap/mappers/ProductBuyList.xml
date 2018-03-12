@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="ProductBuyList">
+	<resultMap id="ProductBuyListResult" type="ProductBuyList">
+		<result property="pid" column="pid"/>
+		<result property="pname" column="pname"/>
+		<result property="pcal" column="pcal"/>
+		<result property="pmegapick" column="pmegapick"/>
+		<result property="pmdpick" column="pmdpick"/>
+		<result property="pmain" column="pmain"/>
+		<result property="pstock" column="pstock"/>
+		<result property="pprice" column="pprice"/>
+		<result property="pcontent" column="pcontent"/>
+		<result property="prate" column="prate"/>
+		<result property="pimage" column="pimage"/>
+		<result property="phiredate" column="phiredate"/>
+		<result property="phit" column="phit"/>
+		<result property="count_pid" column="count_pid"/>
+		
+		
+	</resultMap>
+	
+	<select id="admin_ProductBuyList" resultType="ProductBuyList">
+		select p.*, count_pid from (select pid, count(pid) count_pid from ORDER_DETAIL group by pid) o, product p where p.pid=o.pid
+	</select>
+	
+</mapper>

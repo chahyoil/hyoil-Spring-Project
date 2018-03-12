@@ -1,0 +1,565 @@
+
+#content {
+    min-width: 1050px;
+    padding-bottom: 170px;
+        margin-top: 50px;
+}
+
+.layout-page-title {
+    font-family: 'Noto Sans KR Medium';
+    line-height: 1.5;
+    font-size: 40px!important;
+    font-weight: 400;
+    color: #4e266d;
+    margin-top: 58px;
+    display: block;
+    padding: 10px 0 14px 0;
+    text-align: center;
+}
+.section_cart .tbl_goods .goods_quantity .quantity {
+    float: left;
+    border: 1px solid #ddd;
+    width: 90px;
+}
+.pg_sub_desc{
+	text-align: center;
+}
+
+.user_form {
+    width: 1050px;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR';
+}
+
+.tbl_choice{
+	width: 100%;
+    margin-top: 40px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.tbl_comm {
+    width: 100%;
+}
+
+.tbl_comm caption {
+    display: none;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.section_cart .tbl_comm {
+    width: 100%;
+}
+
+.section_cart .tbl_comm th {
+    padding: 20px 0;
+    border-top: 2px solid #512772;
+    font-weight: 400;
+    font-family: 'Noto Sans KR Medium';
+    font-size: 14px;
+    color: #514859;
+    letter-spacing: -0.3px;
+    text-align: left;
+}
+
+.section_cart .tbl_header .all_select {
+    padding-left: 20px;
+}
+
+.section_cart .all_select .label_check {
+    margin-top: 2px;
+}
+
+.user_form .label_check.checked {
+    background-position: 0 0;
+}
+
+.section_cart .all_select .tit {
+    font-weight: 400;
+    font-family: 'Noto Sans KR Medium';
+    font-size: 14px;
+    color: #514859;
+    line-height: 20px;
+    letter-spacing: 0;
+}
+	.tbl_choice caption{
+		display:none;
+	}
+	
+	tr {
+	    display: table-row;
+	    vertical-align: inherit;
+	    border-color: inherit;
+	}
+	
+	.tbl_choice th:first-child {
+	    border-left: none;
+	}
+	
+	.tbl_choice th{
+		height: 50px;
+	    border-top: 1px solid #d9d9d9;
+	    border-left: 1px solid #d9d9d9;
+	    font-size: 14px;
+	}
+	.tbl_choice #deli_date{
+		width: 154px;
+	}
+	.tbl_choice #today{
+		width: 118px;
+	}
+	.tbl_choice #today_1{
+		width: 118px;
+	}
+	.tbl_choice #today_2{
+		width: 118px;
+	}
+	
+	.tbl_choice td{
+		height: 50px;
+    	border-top: 1px solid #d9d9d9;
+    	text-align: center;
+    	border-left: 1px solid #d9d9d9;
+	}
+	
+	.tbl_choice #delivery_head{
+		display: table-header-group;
+    	vertical-align: middle;
+    	border-color: inherit;
+	}
+	
+	.tbl_choice #delivery {
+    	display: table-row-group;
+    	vertical-align: middle;
+    	border-color: inherit;
+	}
+.screen_out {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+.section_cart #viewGoods {
+    overflow: hidden;
+    width: 100%;
+    border-bottom: 2px solid #ddd;
+}
+
+.section_cart .view_pakege.lst {
+    padding-bottom: 7px;
+}
+
+.section_cart .view_pakege.fst {
+    border-top: 2px solid #ddd;
+}
+
+.section_cart .view_goods .goods {
+    width: 100%;
+    padding: 0 0 14px;
+}
+
+.section_cart .tbl_comm caption {
+    display: none;
+}
+
+.section_cart .view_pakege .tbl_goods .goods_check {
+    border-top: 0 none;
+}
+
+.section_cart .view_pakege .tbl_goods td {
+    padding-top: 14px;
+    padding-bottom: 13px;
+    border-top: 1px solid #ddd;
+}
+
+.section_cart .tbl_goods .goods_check {
+    padding-left: 20px;
+}
+
+.section_cart .tbl_goods td {
+    padding: 20px 0 19px;
+    border: 0 none;
+    text-align: center;
+}
+
+.user_form .label_check.checked {
+    background: #fff url(https://res.kurly.com/pc/service/order/1801/ico_checkbox_16x16_checked.png) no-repeat 0 2px;
+}
+
+.section_cart .tbl_goods .goods_thumb {
+    text-align: left;
+}
+
+dd {
+    display: block;
+}
+
+.section_cart .tbl_goods .thumb {
+    display: block;
+    width: 60px;
+    margin-right: 40px;
+}
+
+.section_cart .tbl_goods .thumb img {
+    width: 100%;
+    height: auto;
+}
+
+.section_cart .tbl_goods .goods_info {
+    padding-top: 18px;
+    text-align: left;
+}
+
+.section_cart .tbl_goods .goods_info .name {
+    font-family: 'Noto Sans KR Medium';
+    font-size: 18px;
+    color: #000; 
+    line-height: 20px;
+    letter-spacing: 0;
+}
+
+.section_cart .tbl_goods .goods_info .goods_cost {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 6px;
+}
+
+.section_cart .tbl_goods .goods_info .goods_cost .selling_price {
+    padding-right: 7px;
+    color: #000;
+}
+
+.section_cart .tbl_goods .goods_info .goods_cost .cost {
+    background: url(https://res.kurly.com/mobile/ico/1801/ico_1x1_949296.png) repeat-x 0 10px;
+    color: #777;
+}
+
+.section_cart .tbl_goods .goods_info .goods_cost dd {
+    float: left;
+    font-size: 14px;
+}
+
+.section_cart .tbl_goods .condition {
+    font-family: 'Noto Sans KR Medium';
+    font-size: 12px;
+    color: #512772;
+    letter-spacing: -0.2px;
+}
+
+.section_cart .tbl_goods .goods_quantity {
+    margin-right: -1px;
+}
+
+.section_cart .tbl_goods .goods_quantity .quantity {
+    float: left;
+    border: 1px solid #ddd;
+}
+
+.section_cart .tbl_goods .goods_quantity .btn_reduce {
+    padding-bottom: 3px;
+    border-right: 1px solid #ddd;
+}
+
+.section_cart .tbl_goods .goods_quantity .btn {
+    float: left;
+    width: 23px;
+    height: 22px;
+    border: 0 none;
+    background-color: #f3f3f3;
+}
+
+.section_cart .tbl_goods .goods_quantity .btn_rise img {
+    height: 12px;
+}
+
+.section_cart .tbl_goods .goods_quantity .btn_reduce img {
+    height: 2px;
+}
+
+.section_cart .tbl_goods .goods_quantity .btn img {
+    width: 12px;
+    vertical-align: middle;
+}
+
+.section_cart .tbl_goods .goods_quantity .inp_quantity {
+    float: left;
+    width: 38px;
+    height: 22px;
+    border: 0 none;
+    background-color: #fff;
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+    letter-spacing: -0.2px;
+}
+
+.section_cart .tbl_goods .goods_quantity .btn_rise {
+    padding-bottom: 1px;
+    border-left: 1px solid #ddd;
+}
+
+.section_cart .tbl_goods .goods_total .result {
+    font-family: 'Noto Sans KR Medium';
+    font-size: 14px;
+    color: #000;
+    letter-spacing: -0.2px;
+    text-align: right;
+}
+
+.section_cart .tbl_goods .goods_delete {
+    padding-left: 41px;
+    text-align: left;
+}
+
+.section_cart .tbl_goods .goods_delete .btn_delete {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 0 none;
+    background-color: #fff;
+}
+
+.section_cart .tbl_goods .goods_delete .btn_delete img {
+    display: block;
+    width: 12px;
+    height: 12px;
+}
+
+.section_cart .select_option {
+    overflow: hidden;
+    width: 100%;
+    padding: 30px 0 80px 20px;
+}
+
+.section_cart .select_option .btn_deleteAll {
+    float: left;
+    height: 42px;
+    margin-right: 12px;
+    padding: 0 17px;
+    border: 1px solid #512772;
+    background-color: #fff;
+    color: #56297a;
+    letter-spacing: 0;
+}
+
+.cart_amount {
+    overflow: hidden;
+    width: 100%;
+}
+
+.cart_amount .amount_detail {
+    float: left;
+    border: 2px solid #ddd;
+}
+
+.cart_amount .amount_total {
+    width: 122px;
+}
+
+.cart_amount .amount_total .tit {
+    padding-left: 22px;
+}
+
+.cart_amount .list .tit {
+    display: block;
+    overflow: hidden;
+    padding: 18px 16px 20px;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Noto Sans KR Medium';
+    font-size: 14px;
+    color: #514859;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.cart_amount .amount_total .result {
+    padding-left: 7px;
+}
+
+.cart_amount .list .result {
+    padding: 28px 0 25px;
+    font-size: 14px;
+    color: #000;
+    line-height: 29px;
+    letter-spacing: -0.3px;
+    text-align: center;
+}
+
+.cart_amount .list {
+    float: left;
+    width: 116px;
+}
+
+.cart_amount .amount_class {
+    width: 122px;
+}
+
+.cart_amount .amount_class .tit {
+    padding-right: 22px;
+}
+
+.cart_amount .amount_class .result {
+    padding-right: 7px;
+}
+
+.cart_amount .amout_order {
+    width: 178px;
+    background-color: #f7f5f8;
+}
+
+.cart_amount .amout_order .result {
+    font-family: 'Noto Sans KR Medium';
+    font-size: 16px;
+}
+
+.cart_amount .amout_order .result {
+    font-family: 'Noto Sans KR Medium';
+    font-size: 16px;
+}
+
+.cart_amount .deco {
+    position: relative;
+    float: left;
+    width: 56px;
+    height: 145px;
+}
+<!--
+.cart_amount .deco_plus .fst {
+    left: 27px;
+    top: 62px;
+    width: 2px;
+    height: 16px;
+}
+
+.cart_amount .deco_plus .ico {
+    left: 20px;
+    top: 69px;
+}
+
+.cart_amount .deco .ico {
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background-color: #777;
+}
+-->
+.cart_amount .amount_delivery {
+    width: 180px;
+    border: 2px solid #ddd;
+    background-color: #f7f5f8;
+}
+
+.cart_amount .amount_delivery .result {
+    display: table;
+    width: 100%;
+    height: 82px;
+    padding: 3px 0 0;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.cart_amount .amount_delivery .inner_result {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.cart_amount .deco_equal .fst {
+    left: 38px;
+    top: 66px;
+}
+
+.cart_amount .deco_equal .ico {
+    left: 38px;
+    top: 72px;
+}
+
+.cart_amount .amout_result {
+    float: right;
+    width: 180px;
+    border: 2px solid #ddd;
+    background-color: #f7f5f8;
+}
+
+.cart_amount .amout_result .result {
+    font-size: 20px;
+    color: #512772;
+}
+
+.section_cart .btn_submit {
+    display: block;
+    width: 200px;
+    height: 48px;
+    margin: 0 auto;
+    border: 0 none;
+    background-color: #512772;
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+}
+
+.tbl_inputwrap{
+	overflow: hidden;
+    width: 100%;
+    padding: 20px 0 20px 20px;
+}
+
+.tbl_inputwrap tr{
+	border-spacing:20px;
+	height:20px;
+}
+
+
+.tbl_inputwrap #deliveryInput{
+	float: left; 
+	line-height:23px;
+    height: 49px;
+    width: 104px;
+    margin-right: 12px;
+    padding: 0 17px;
+    border: 1px solid #512772;
+    background-color: #fff;
+    color: #56297a;
+    text-align:center;
+    letter-spacing: 0;
+}
+
+.tbl_inputwrap #telInput{
+	float: left;
+    height: 49px;
+    line-height:24px;
+    width: 104px;
+    margin-right: 12px;  
+    padding: 0 17px;  
+    border: 1px solid #512772;  
+    background-color: #fff;
+    color: #56297a;
+    text-align:center;
+    letter-spacing: 0;
+}
+
+.tbl_inputwrap .orderinput{
+	height: 27px;
+}
+
+.tbl_inputwrap .space_input{
+	height:10px;
+}
+
+.space{
+	height:20px;
+}

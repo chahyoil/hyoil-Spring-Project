@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Rboarder">
+	<resultMap type="Rboarder" id="RboarderResult">
+		<result property="rbno" column="rbno" />
+		<result property="rbtitle" column="rbtitle" />
+		<result property="rbcontent" column="rbcontent" />
+		<result property="rbhit" column="rbhit" />
+		<result property="rbfile" column="rbfile" />
+		<result property="rbref" column="rbref" />
+		<result property="rbstep" column="rbstep" />
+		<result property="rblevel" column="rblevel" />
+		<result property="rbtime" column="rbtime" />
+		<result property="mid" column="mid" />
+		<result property="aid" column="aid" />
+		<result property="pid" column="pid" />
+		<result property="startRow" column="startRow" />
+		<result property="endRow" column="endRow" />
+	</resultMap>
+
+	<select id="member_ReviewList" resultMap="RboarderResult"
+		parameterType="Rboarder">
+		SELECT * FROM (SELECT
+		ROWNUM RN, A.* FROM (SELECT * FROM
+		RBOARD ORDER BY RBREF DESC, RBSTEP)
+		A) WHERE RN BETWEEN #{startRow} AND
+		#{endRow}
+
+	</select>
+	<select id="member_ReviewContentView" resultMap="RboarderResult">
+		SELECT * FROM
+		RBOARD WHERE RBNO=#{rbno}
+	</select>
+	<delete id="member_ReviewDelete" parameterType="Rboarder">
+		DELETE FROM
+		RBOARD WHERE RBNO=#{rbno}
+	</delete>
+
+	<insert id="member_ReviewWrite" parameterType="Rboarder">
+		INSERT INTO
+		RBOARD(RBNO,MID, RBTITLE, RBCONTENT, RBFILE, RBREF, RBSTEP, RBLEVEL,RBHIT)
+		VALUES(RBOARD_SEQ.NEXTVAL,#{mid},#{rbtitle},#{rbcontent},#{rbfile},RBOARD_SEQ.CURRVAL,0,0,0)
+
+	</insert>
+	<insert id="member_ReviewReply" parameterType="Rboarder">
+		INSERT INTO
+		RBOARD(RBNO, RBTITLE, RBCONTENT,
+		RBFILE,RBREF,RBSTEP,RBLEVEL,RBHIT)
+		VALUES(RBOARD_SEQ.NEXTVAL,#{rbtitle},#{rbcontent},#{rbfile},#{rbref},#{rbstep},#{rblevel},#{rbhit})
+
+		
+	</insert>
+
+	<update id="member_ReviewModify" parameterType="Rboarder">
+		UPDATE RBOARD SET
+		RBTITLE=#{rbtitle},RBCONTENT=#{rbcontent},RBFILE=#{rbfile}
+		WHERE
+		RBNO=#{rbno}
+	</update>
+
+
+	<select id="cntRboad" resultType="int">
+		SELECT COUNT(*) FROM RBOARD
+	</select>
+	<update id="member_ReviewUpdateHit" parameterType="int">
+		UPDATE RBOARD
+		SET RBHIT=RBHIT+1 WHERE RBNO=#{rbno}
+	</update>
+
+
+
+
+
+
+
+</mapper>
