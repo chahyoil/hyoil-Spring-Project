@@ -11,7 +11,7 @@
 ![DB설계](./img/03.JPG)
 ---------------------------------------
 
-+ controller
++ ##controller
   + HomecontrollerH 부분을 전부 담당했음.
     - @Autowired : 특정 서비스를 컨트롤러에서 쓸 수 있게 하는 역할
     
