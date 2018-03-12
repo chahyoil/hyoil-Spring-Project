@@ -59,7 +59,8 @@
   + js폴더를 따로 만들어서 관리.
   + jquery에서 다양한 선택자를 이용했고, ajax 통신 방식을 적극적으로 활용함
     + closest, find, $("#id"), $(".class"), $(...).forEach( function(index, value){ } ), $(...).on("click", function(){ }
-    + 등 다양한 함수와 jquery, javascript function을 활용했습니다.
+    
+    + 등 다양한 함수와 jquery, javascript function을 활용했습니다.
 + jsp
   
   + jstl을 활용해서 페이지를 만들었음.
