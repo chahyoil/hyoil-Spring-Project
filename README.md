@@ -25,16 +25,18 @@
     
     - 장바구니 삭제, 추가, 개수 변경, 리스트 구현, 구매 리스트, 추가, 구매 확정 등을 하였습니다.
 
+
 + Service
-  + AdminService 부분의 일정량
-    
+  + AdminService 부분의 일정량
     - interface : 인터페이스를 사용하면서 implements를 해서 Service구현 단계에서는 @Override를 했음.
-  
   + MemberService 부분의 일정량
-    
-  + ProductService 부분의 일정량
-   
-    - multipartRequest를 사용해서 이미지 파일도 추가 및 변경할 수 있도록 만들었음.
+  
+  + ProductService 부분의 일정량
+    - multipartRequest를 사용해서 이미지 파일도 추가 및 변경할 수 있도록 만들었음
+
+
+
+
 
 + Model
   + Dao와 sqlMapper 등에서 사용할 모델들을 만들어서 getter와 setter, 생성자 등으로 가지고올 수 있게 함.
