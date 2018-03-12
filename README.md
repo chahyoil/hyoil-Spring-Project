@@ -11,7 +11,7 @@
 ![DB설계](./img/03.JPG)
 ---------------------------------------
 
-+ ##controller
++ Controller
   + HomecontrollerH 부분을 전부 담당했음.
     - @Autowired : 특정 서비스를 컨트롤러에서 쓸 수 있게 하는 역할
     
@@ -24,3 +24,22 @@
     - 프로젝트에서 내가 맡은 부분은 회원관리(로그인,회원가입,탈퇴), 관리자 회원관리(블락처리, 유저 등급향상, 물품 관리(물품 수정, 삭제, 추가)
     
     - 장바구니 삭제, 추가, 개수 변경, 리스트 구현, 구매 리스트, 추가, 구매 확정 등을 하였습니다.
+
++ Service
+  + AdminService 부분의 일정량
+    - interface : 인터페이스를 사용하면서 implements를 해서 Service구현 단계에서는 @Override를 했음.
+  
+  + MemberService 부분의 일정량
+    
+  + ProductService 부분의 일정량
+    - multipartRequest를 사용해서 이미지 파일도 추가 및 변경할 수 있도록 만들었음.
+
++ Model
+  + Dao와 sqlMapper 등에서 사용할 모델들을 만들어서 getter와 setter, 생성자 등으로 가지고올 수 있게 함.
+    
+
++ Dao
+  + Service 부분과 같은 부분을 맡음.
+    - SqlSessionTemplate 을 사용해서, model과 sql이 서로 연결될 수 있게 만들었다.
+   
+    - 물품 장바구니, 구매로직에서
