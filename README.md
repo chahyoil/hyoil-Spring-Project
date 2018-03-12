@@ -10,5 +10,5 @@
 ## DB의 설계도는 다음과 같습니다.
 ![DB설계](./img/03.JPG)
 ---------------------------------------
-* controller 부분
- * HomecontrollerH 를 전부 담당했음.
++ controller
+  + HomecontrollerH 부분을 전부 
