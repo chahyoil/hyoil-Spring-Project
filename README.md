@@ -29,7 +29,9 @@
 + Service
   + AdminService 부분의 일정량
     - interface : 인터페이스를 사용하면서 implements를 해서 Service구현 단계에서는 @Override를 했음.
-  + MemberService 부분의 일정량
+  
+  + MemberService 부분의 일정량
+  
   + ProductService 부분의 일정량
     - multipartRequest를 사용해서 이미지 파일도 추가 및 변경할 수 있도록 만들었음
 
@@ -40,6 +42,8 @@
 + Dao
   + Service 부분과 같은 부분을 맡음.
     - SqlSessionTemplate 을 사용해서, model과 sql이 서로 연결될 수 있게 만들었다.
-    - 물품 장바구니, 구매로직에서 product 테이블과 연관있는 부분... 
-    - 제품 재고변경, 사용자 총 구매액 변경, 상품 구매완료 update, 일정구매 이상시 회원 등급변경 등 다양한 기능을 넣었음.
+    
+    - 물품 장바구니, 구매로직에서 product 테이블과 연관있는 부분... 
+    
+    - 제품 재고변경, 사용자 총 구매액 변경, 상품 구매완료 update, 일정구매 이상시 회원 등급변경 등 다양한 기능을 넣었음.
     
