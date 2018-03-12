@@ -36,12 +36,15 @@
     - multipartRequest를 사용해서 이미지 파일도 추가 및 변경할 수 있도록 만들었음
 
 + Model
-  + Dao와 sqlMapper 등에서 사용할 모델들을 만들어서 getter와 setter, 생성자 등으로 가지고올 수 있게 함.
+  
+  + Dao와 sqlMapper 등에서 사용할 모델들을 만들어서 getter와 setter, 생성자 등으로 가지고올 수 있게 함.
     
 
 + Dao
-  + Service 부분과 같은 부분을 맡음.
-    - SqlSessionTemplate 을 사용해서, model과 sql이 서로 연결될 수 있게 만들었다.
+  
+  + Service 부분과 같은 부분을 맡음.
+    
+    - SqlSessionTemplate 을 사용해서, model과 sql이 서로 연결될 수 있게 만들었다.
     
     - 물품 장바구니, 구매로직에서 product 테이블과 연관있는 부분... 
     
